@@ -1,5 +1,6 @@
 package com.example.cellularautomata
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -19,16 +20,24 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         mainEmail="s@gmail.com"
         mainPassword="sugam123"
+        val sharedPreferences=getSharedPreferences("user", MODE_PRIVATE)
+
+        if(sharedPreferences.getBoolean("login",false)){
+            val intent= Intent(this@LoginActivity,HomeActivity::class.java)
+            startActivity(intent)
+        }
         binding.btnLogin.setOnClickListener {
             val email=binding.etEmail.text.toString()
             val password=binding.etPassword.text.toString()
-
+            sharedPreferences.edit().putBoolean("login",true).apply()
             if(email==mainEmail && mainPassword==password){
-                Toast.makeText(this@LoginActivity,"Login",Toast.LENGTH_LONG).show()
 
+                Toast.makeText(this@LoginActivity,"Login",Toast.LENGTH_SHORT).show()
+                val intent= Intent(this@LoginActivity,HomeActivity::class.java)
+                startActivity(intent)
             }
             else{
-                Toast.makeText(this@LoginActivity,"Invalid\nEmail",Toast.LENGTH_LONG).show()
+                Toast.makeText(this@LoginActivity,"Invalid\nEmail",Toast.LENGTH_SHORT).show()
             }
         }
 
