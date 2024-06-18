@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.HomeFragment">
+    tools:context="Fragments.HomeFragment">
+
 
     <ImageView
         android:id="@+id/imgstudy"
@@ -77,7 +78,7 @@
         app:layout_constraintTop_toTopOf="@+id/imgGameofLife" />
 
     <ImageView
-        android:id="@+id/imgMore"
+        android:id="@+id/imgQuiz"
         android:layout_width="200dp"
         android:layout_height="80dp"
         android:layout_marginTop="50dp"
@@ -85,6 +86,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgGameofLife" />
+
+    <TextView
+        android:id="@+id/textQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgQuiz"
+        app:layout_constraintEnd_toEndOf="@+id/imgQuiz"
+        app:layout_constraintStart_toStartOf="@+id/imgQuiz"
+        app:layout_constraintTop_toTopOf="@+id/imgQuiz" />
+
+    <ImageView
+        android:id="@+id/imgMore"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/button_box"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgQuiz" />
 
     <TextView
         android:id="@+id/textMore"
@@ -98,5 +122,8 @@
         app:layout_constraintEnd_toEndOf="@+id/imgMore"
         app:layout_constraintStart_toStartOf="@+id/imgMore"
         app:layout_constraintTop_toTopOf="@+id/imgMore" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

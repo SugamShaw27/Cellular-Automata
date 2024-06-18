@@ -6,32 +6,56 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.cellularautomata.Fragments.HomeFragment"
+        android:name="Fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_studyFragment"
+            app:destination="@id/studyFragment" />
+    </fragment>
     <fragment
         android:id="@+id/dashboardFragment"
-        android:name="com.example.cellularautomata.Fragments.DashboardFragment"
+        android:name="Fragments.DashboardFragment"
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" />
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.cellularautomata.Fragments.SearchFragment"
+        android:name="Fragments.SearchFragment"
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" />
     <fragment
         android:id="@+id/notificationFragment"
-        android:name="com.example.cellularautomata.Fragments.NotificationFragment"
+        android:name="Fragments.NotificationFragment"
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.cellularautomata.Fragments.ProfileFragment"
+        android:name="Fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/contriAboutAppFragment"
-        android:name="com.example.cellularautomata.Fragments.ContriAboutAppFragment"
+        android:name="Fragments.ContriAboutAppFragment"
         android:label="fragment_contri_about_app"
         tools:layout="@layout/fragment_contri_about_app" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.cellularautomata.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.cellularautomata.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.cellularautomata.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <fragment
+        android:id="@+id/studyFragment"
+        android:name="com.example.cellularautomata.Fragments.StudyFragment"
+        android:label="fragment_study"
+        tools:layout="@layout/fragment_study" />
 </navigation>

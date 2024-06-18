@@ -20,12 +20,13 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
         mainEmail="s@gmail.com"
         mainPassword="sugam123"
-        val sharedPreferences=getSharedPreferences("user", MODE_PRIVATE)
+        val sharedPreferences=getSharedPreferences(getString(R.string.preference_file), MODE_PRIVATE)
 
         if(sharedPreferences.getBoolean("login",false)){
             val intent= Intent(this@LoginActivity,HomeActivity::class.java)
             startActivity(intent)
         }
+
         binding.btnLogin.setOnClickListener {
             val email=binding.etEmail.text.toString()
             val password=binding.etPassword.text.toString()
@@ -33,13 +34,24 @@ class LoginActivity : AppCompatActivity() {
             if(email==mainEmail && mainPassword==password){
 
                 Toast.makeText(this@LoginActivity,"Login",Toast.LENGTH_SHORT).show()
-                val intent= Intent(this@LoginActivity,HomeActivity::class.java)
+                val intent= Intent(this@LoginActivity,HomeActivity::class.java).apply {
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }
+
                 startActivity(intent)
             }
             else{
                 Toast.makeText(this@LoginActivity,"Invalid\nEmail",Toast.LENGTH_SHORT).show()
+                binding.etEmail.requestFocus()
+                binding.etEmail.error="Invalid Email"
+                binding.etPassword.error="Invalid Password"
             }
+            finish()
         }
 
     }
+    override fun onBackPressed() {
+        finish()
+    }
+
 }

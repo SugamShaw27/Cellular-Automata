@@ -1,4 +1,4 @@
-package com.example.cellularautomata.Fragments
+package Fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

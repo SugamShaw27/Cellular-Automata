@@ -13,6 +13,18 @@
         android:theme="@style/Theme.CellularAutomata"
         tools:targetApi="31">
         <activity
+            android:name=".GameoflifeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudyActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_home" />

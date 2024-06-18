@@ -1,4 +1,4 @@
-package com.example.cellularautomata.Fragments
+package Fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -18,8 +18,8 @@ class ContriAboutAppFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding= FragmentContriAboutAppBinding.inflate(inflater,container,false)
-//        val message=activity?.intent?.getStringExtra("message")
-//        binding.textDisplay.text=message
+        val message=arguments?.getString("message")
+        binding.textDisplay.text=message
         return binding.root
     }
 }
