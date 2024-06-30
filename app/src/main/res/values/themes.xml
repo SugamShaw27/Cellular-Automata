@@ -5,20 +5,22 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">@color/orange</item>
         <item name="colorPrimaryDark">@color/orange</item>
-        <item name="colorAccent">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Background color. -->
+        <item name="android:colorBackground">@color/light_white_orange</item>
+
+
+        <item name="colorAccent">@color/orange</item>
 <!--        <item name="android:textColorSecondary">@color/orange</item>-->
 
-        <item name="colorOnPrimary">@color/white</item>
-<!--        <item name="colorOnSecondary">@color/black</item>-->
-<!--        <item name="colorOnSurface">@color/black</item>-->
-<!--        <item name="colorOnBackground">@color/black</item>-->
-<!--        <item name="colorSurface">@color/white</item>-->
-<!--        <item name="colorSurfaceVariant">@color/white</item>-->
-<!--        <item name="colorOnSurfaceVariant">@color/black</item>-->
-<!--        <item name="colorOutline">@color/black</item>-->
+
     </style>
 
     <style name="Theme.CellularAutomata" parent="Base.Theme.CellularAutomata" />
     <style name="BlackMenuIconStyle" parent="Widget.AppCompat.ActionBar">
         <item name="android:tint">@color/orange</item> </style>
+
+
+
 </resources>

@@ -15,4 +15,11 @@
     <string name="about_app">About App</string>
     <string name="contributor">Contributor</string>
     <string name="preference_file">PreferenceFile</string>
+    <string name="_1_yt_link">1. <u><b>Yt link</b></u></string>
+    <string name="_2_yt_link">2. <u><b>Yt link</b></u></string>
+    <string name="_3_yt_link">3. <u><b>Yt link</b></u></string>
+    <string name="_4_yt_link">4. <u><b>Wikipedia link</b></u></string>
+    <string name="submit">Submit</string>
+    <string name="finish">Finish</string>
+    <string name="hey_congratulations">Hey, Congratulations!!</string>
 </resources>

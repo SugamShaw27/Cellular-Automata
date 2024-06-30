@@ -4,13 +4,14 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cellularautomata.databinding.StudyListAdapterBinding
+import com.example.cellularautomata.databinding.MaterialListAdapterBinding
+
 
 class GameoflifeAdapter(var content: Context, var arrayList: ArrayList<String>): RecyclerView.Adapter<GameoflifeAdapter.ViewHolder>() {
-    inner class ViewHolder(val binding: StudyListAdapterBinding):RecyclerView.ViewHolder(binding.root)
+    inner class ViewHolder(val binding: MaterialListAdapterBinding):RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var binding=StudyListAdapterBinding.inflate(LayoutInflater.from(content),parent,false)
+        var binding=MaterialListAdapterBinding.inflate(LayoutInflater.from(content),parent,false)
         return ViewHolder(binding)
     }
 

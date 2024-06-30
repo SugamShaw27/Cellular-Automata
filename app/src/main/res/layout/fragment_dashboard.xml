@@ -8,144 +8,220 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="16dp">
 
-        <ImageView
-            android:id="@+id/imgstudy"
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circularProgressBar"
             android:layout_width="200dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/button_box"
+            android:layout_height="200dp"
+            android:layout_marginTop="28dp"
+            app:cpb_background_progressbar_color="@color/grey"
+            app:cpb_background_progressbar_width="20dp"
+            app:cpb_progress="0"
+            app:cpb_progress_direction="to_left"
+            app:cpb_progress_max="10"
+            app:cpb_progressbar_color="@color/orange"
+            app:cpb_progressbar_color_direction="left_to_right"
+            app:cpb_progressbar_width="10dp"
+            app:cpb_round_border="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
-            android:id="@+id/textstudy"
+            android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Study"
-            android:textSize="18sp"
+            android:text="Course\n Detail"
+            android:textColor="@color/orange"
+            android:textSize="18dp"
             android:textStyle="bold"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/imgstudy"
-            app:layout_constraintEnd_toEndOf="@+id/imgstudy"
-            app:layout_constraintStart_toStartOf="@+id/imgstudy"
-            app:layout_constraintTop_toTopOf="@+id/imgstudy" />
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+            app:layout_constraintTop_toTopOf="@+id/circularProgressBar" />
 
         <ImageView
-            android:id="@+id/imgplay"
-            android:layout_width="200dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/button_box"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgstudy" />
+            android:id="@+id/imageView3"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/button"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+            app:layout_constraintTop_toBottomOf="@+id/circularProgressBar" />
 
         <TextView
-            android:id="@+id/textplay"
+            android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Play"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/imgplay"
-            app:layout_constraintEnd_toEndOf="@+id/imgplay"
-            app:layout_constraintStart_toStartOf="@+id/imgplay"
-            app:layout_constraintTop_toTopOf="@+id/imgplay" />
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Course Completed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/circularProgressBar" />
 
         <ImageView
-            android:id="@+id/imgGameofLife"
-            android:layout_width="200dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/button_box"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgplay" />
+            android:id="@+id/imageView4"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/progressshowbutton"
+            app:layout_constraintEnd_toEndOf="@+id/textView5"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
         <TextView
-            android:id="@+id/textgameoflife"
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Game of Life"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/imgGameofLife"
-            app:layout_constraintEnd_toEndOf="@+id/imgGameofLife"
-            app:layout_constraintStart_toStartOf="@+id/imgGameofLife"
-            app:layout_constraintTop_toTopOf="@+id/imgGameofLife" />
-
-        <ImageView
-            android:id="@+id/imgQuiz"
-            android:layout_width="200dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/button_box"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Not completed course"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgGameofLife" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <TextView
-            android:id="@+id/textQuiz"
+            android:id="@+id/progressText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Quiz"
-            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:text="Completed 0 out of 10 courses"
             android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/imgQuiz"
-            app:layout_constraintEnd_toEndOf="@+id/imgQuiz"
-            app:layout_constraintStart_toStartOf="@+id/imgQuiz"
-            app:layout_constraintTop_toTopOf="@+id/imgQuiz" />
-
-        <ImageView
-            android:id="@+id/imgMore"
-            android:layout_width="200dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/button_box"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgQuiz" />
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <Button
+            android:id="@+id/btngotocourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Go to Course"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressText" />
+
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/circularProgressBar2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="30dp"
+            app:cpb_background_progressbar_color="@color/grey"
+            app:cpb_background_progressbar_width="5dp"
+            app:cpb_progress="0"
+            app:cpb_progress_direction="to_left"
+            app:cpb_progress_max="10"
+            app:cpb_progressbar_color="@color/orange"
+            app:cpb_progressbar_color_direction="right_to_left"
+            app:cpb_progressbar_width="10dp"
+            app:cpb_round_border="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btngotocourse" />
 
         <TextView
-            android:id="@+id/textMore"
+            android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="More.."
-            android:textColor="@color/white"
-            android:textSize="18sp"
+            android:text=" Quiz\nDetail"
+            android:textColor="@color/orange"
+            android:textSize="18dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/imgMore"
-            app:layout_constraintEnd_toEndOf="@+id/imgMore"
-            app:layout_constraintStart_toStartOf="@+id/imgMore"
-            app:layout_constraintTop_toTopOf="@+id/imgMore" />
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar2"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressBar2"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressBar2"
+            app:layout_constraintTop_toTopOf="@+id/circularProgressBar2" />
 
         <ImageView
-            android:id="@+id/imgMore1"
-            android:layout_width="200dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/button_box"
+            android:id="@+id/imageView32"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/button"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressBar2"
+            app:layout_constraintHorizontal_bias="0.17"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressBar2"
+            app:layout_constraintTop_toBottomOf="@+id/circularProgressBar2" />
+
+        <TextView
+            android:id="@+id/textView52"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Quiz Completed"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgMore" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView32"
+            app:layout_constraintTop_toBottomOf="@+id/circularProgressBar2" />
 
         <ImageView
-            android:id="@+id/imgMore2"
-            android:layout_width="200dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="50dp"
-            android:src="@drawable/button_box"
+            android:id="@+id/imageView42"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/progressshowbutton"
+            app:layout_constraintEnd_toEndOf="@+id/textView52"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressBar2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView32" />
+
+        <TextView
+            android:id="@+id/textView62"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Not completed Quiz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView42"
+            app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+        <TextView
+            android:id="@+id/progressText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Completed 0 out of 10 quiz"
+            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgMore1" />
+            app:layout_constraintTop_toBottomOf="@+id/textView62" />
+
+        <Button
+            android:id="@+id/btnGoToQuiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Go to Quiz"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressText2" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Restart the Journey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnGoToQuiz" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </ScrollView>

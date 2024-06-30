@@ -4,88 +4,88 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Fragments.HomeFragment">
+    tools:context=".HomeFragments.HomeFragment">
 
 
     <ImageView
-        android:id="@+id/imgstudy"
+        android:id="@+id/imgMaterial"
         android:layout_width="200dp"
         android:layout_height="80dp"
         android:layout_marginTop="30dp"
-        android:src="@drawable/button_box"
+        android:src="@drawable/rectangle_show_box"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textstudy"
+        android:id="@+id/textMaterial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Study"
+        android:text="Material"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/imgstudy"
-        app:layout_constraintEnd_toEndOf="@+id/imgstudy"
-        app:layout_constraintStart_toStartOf="@+id/imgstudy"
-        app:layout_constraintTop_toTopOf="@+id/imgstudy" />
+        app:layout_constraintBottom_toBottomOf="@+id/imgMaterial"
+        app:layout_constraintEnd_toEndOf="@+id/imgMaterial"
+        app:layout_constraintStart_toStartOf="@+id/imgMaterial"
+        app:layout_constraintTop_toTopOf="@+id/imgMaterial" />
 
     <ImageView
-        android:id="@+id/imgplay"
+        android:id="@+id/imgexperiment"
         android:layout_width="200dp"
         android:layout_height="80dp"
         android:layout_marginTop="50dp"
-        android:src="@drawable/button_box"
+        android:src="@drawable/rectangle_show_box"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgstudy" />
+        app:layout_constraintTop_toBottomOf="@+id/imgMaterial" />
 
     <TextView
-        android:id="@+id/textplay"
+        android:id="@+id/textexperiment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
+        android:text="Experiment"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imgplay"
-        app:layout_constraintEnd_toEndOf="@+id/imgplay"
-        app:layout_constraintStart_toStartOf="@+id/imgplay"
-        app:layout_constraintTop_toTopOf="@+id/imgplay" />
+        app:layout_constraintBottom_toBottomOf="@+id/imgexperiment"
+        app:layout_constraintEnd_toEndOf="@+id/imgexperiment"
+        app:layout_constraintStart_toStartOf="@+id/imgexperiment"
+        app:layout_constraintTop_toTopOf="@+id/imgexperiment" />
 
     <ImageView
-        android:id="@+id/imgGameofLife"
+        android:id="@+id/imgPlayGame"
         android:layout_width="200dp"
         android:layout_height="80dp"
         android:layout_marginTop="50dp"
-        android:src="@drawable/button_box"
+        android:src="@drawable/rectangle_show_box"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgplay" />
+        app:layout_constraintTop_toBottomOf="@+id/imgexperiment" />
 
     <TextView
-        android:id="@+id/textgameoflife"
+        android:id="@+id/textPlayGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Game of Life"
+        android:text="Play Games"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imgGameofLife"
-        app:layout_constraintEnd_toEndOf="@+id/imgGameofLife"
-        app:layout_constraintStart_toStartOf="@+id/imgGameofLife"
-        app:layout_constraintTop_toTopOf="@+id/imgGameofLife" />
+        app:layout_constraintBottom_toBottomOf="@+id/imgPlayGame"
+        app:layout_constraintEnd_toEndOf="@+id/imgPlayGame"
+        app:layout_constraintStart_toStartOf="@+id/imgPlayGame"
+        app:layout_constraintTop_toTopOf="@+id/imgPlayGame" />
 
     <ImageView
         android:id="@+id/imgQuiz"
         android:layout_width="200dp"
         android:layout_height="80dp"
         android:layout_marginTop="50dp"
-        android:src="@drawable/button_box"
+        android:src="@drawable/rectangle_show_box"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgGameofLife" />
+        app:layout_constraintTop_toBottomOf="@+id/imgPlayGame" />
 
     <TextView
         android:id="@+id/textQuiz"
@@ -105,7 +105,7 @@
         android:layout_width="200dp"
         android:layout_height="80dp"
         android:layout_marginTop="50dp"
-        android:src="@drawable/button_box"
+        android:src="@drawable/rectangle_show_box"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgQuiz" />
