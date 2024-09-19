@@ -36,16 +36,6 @@ class LoginActivity : AppCompatActivity() {
             {
                 sharedPreferences.edit().putBoolean("login",true).apply()
                 sharedPreferences.edit().putBoolean("home",true).apply()
-//                for(i in 0 until Constants.totalCourses)
-//                {
-//                    sharedPreferences.edit().putInt("course$i",0).apply()
-//                }
-//
-//                for(i in 0 until Constants.totalQuiz)
-//                {
-//                    sharedPreferences.edit().putInt("quiz$i",0).apply()
-//                }
-
                 Toast.makeText(this@LoginActivity,"Login",Toast.LENGTH_SHORT).show()
                 val intent= Intent(this@LoginActivity,HomeActivity::class.java).apply {
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -55,10 +45,18 @@ class LoginActivity : AppCompatActivity() {
                 finish()
             }
             else{
-                Toast.makeText(this@LoginActivity,"Invalid\nEmail",Toast.LENGTH_SHORT).show()
-                binding.etEmail.requestFocus()
-                binding.etEmail.error="Invalid Email"
-                binding.etPassword.error="Invalid Password"
+                Toast.makeText(this@LoginActivity,"Invalid\nCredential",Toast.LENGTH_SHORT).show()
+                if(email!=mainEmail)
+                {
+                    binding.etEmail.requestFocus()
+                    binding.etEmail.error="Invalid Email"
+                }
+                if(password!=mainPassword)
+                {
+                    binding.etPassword.requestFocus()
+
+                    binding.etPassword.error="Invalid Password"
+                }
             }
         }
 

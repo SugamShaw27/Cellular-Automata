@@ -32,6 +32,10 @@ class MaterialDisplayFragment : Fragment() {
 
         binding.textShow.text = data
 
+        binding.ytLink1.text="1. Cellular Automata and Deep Learning"
+        binding.ytLink2.text="2. Cellular Automata and Its Applications"
+        binding.ytLink3.text="3. Introduction to Cellular Automata "
+        binding.ytLink4.text="4. Cellular Automata Wikipedia"
         binding.ytLink1.setOnClickListener {
             openUrl("https://youtu.be/X119QcvOGOw?si=FWhOZFt8lvqR0IGi")
         }

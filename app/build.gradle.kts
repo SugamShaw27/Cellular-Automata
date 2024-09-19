@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.chaquo.python")
+    id("kotlin-kapt")
 }
 
 android {
@@ -41,15 +42,15 @@ android {
         jvmTarget = "1.8"
     }
 
-        buildFeatures {
-            viewBinding=true
-        }
+    buildFeatures {
+        viewBinding = true
+    }
 
-        flavorDimensions += "pyVersion"
-        productFlavors {
-            create("py310") { dimension = "pyVersion" }
-            create("py311") { dimension = "pyVersion" }
-        }
+    flavorDimensions += "pyVersion"
+    productFlavors {
+        create("py310") { dimension = "pyVersion" }
+        create("py311") { dimension = "pyVersion" }
+    }
 
 }
 chaquopy {
@@ -70,6 +71,7 @@ chaquopy {
 }
 chaquopy {
     defaultConfig {
+//        version = "3.11"
         version = "3.11"
     }
 }
@@ -86,8 +88,9 @@ chaquopy {
         pip {
             install("numpy")
             install("matplotlib")
-            install ("pillow")
-            install ("seaborn")
+            install("pillow")
+            install("seaborn")
+            install("networkx")
         }
     }
 }
@@ -108,7 +111,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation("com.mikhaellopez:circularprogressbar:3.1.0")
+    implementation("com.github.chrisbanes:PhotoView:2.3.0")
 
-    implementation ("com.github.chrisbanes:PhotoView:2.3.0")
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    kapt("com.github.bumptech.glide:compiler:4.15.1")
 
 }

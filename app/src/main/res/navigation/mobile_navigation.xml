@@ -56,7 +56,11 @@
         android:id="@+id/playGamesFragment"
         android:name="com.example.cellularautomata.HomeFragments.PlayGamesFragment"
         android:label="Play Games"
-        tools:layout="@layout/fragment_play_games" />
+        tools:layout="@layout/fragment_play_games" >
+        <action
+            android:id="@+id/action_playGamesFragment_to_playGamesDisplayFragment"
+            app:destination="@id/playGamesDisplayFragment" />
+    </fragment>
     <fragment
         android:id="@+id/quizFragment"
         android:name="com.example.cellularautomata.HomeFragments.QuizFragment"
@@ -128,6 +132,11 @@
         android:name="com.example.cellularautomata.HomeFragments.ExperimentDisplayFragment"
         android:label="Experiment display"
         tools:layout="@layout/fragment_experiment_display" />
+    <fragment
+        android:id="@+id/playGamesDisplayFragment"
+        android:name="com.example.cellularautomata.HomeFragments.PlayGamesDisplayFragment"
+        android:label="Play Game display"
+        tools:layout="@layout/fragment_play_games_display" />
 
 
 </navigation>

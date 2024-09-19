@@ -20,12 +20,13 @@ class ExperimentFragment : Fragment() {
         binding=FragmentExperimentBinding.inflate(inflater,container,false)
 
         val arrayList:ArrayList<String> = arrayListOf(
-            "1. Uniform CA\n(no random initial state)\n(final_code)", //input-> rule no. , return -> img,png
-            "2. Uniform CA\n(random initial state)\n(final_code)",    //input-> rule no.
-            "3. Uniform CA\n(no random initial state)\n(random position)\n(final_code2)", //input-> rule no.
-            "4. Uniform CA\n(random initial state)\n(random position)\n(final_code2)",    //input-> rule no.
-            "5. Non Uniform CA\n(random initial state)\n(no random position)\n(final_code4)",
-            "6. Non Uniform CA\n(random initial state)\n(random position)\n(final_code4)",
+            "1. Uniform CA\n(no random initial state)",
+            "2. Uniform CA\n(random initial state)",
+            "3. Uniform CA\n(no random initial state)\n(random position)",
+            "4. Uniform CA\n(random initial state)\n(random position)",
+            "5. Non Uniform CA\n(random initial state)\n(no random position)",
+            "6. Non Uniform CA\n(random initial state)\n(random position)",
+            "7. Non Uniform CA\n(random initial state)\n(random position)\n(different rule vector)",
         )
 
         val adapter= ExperimentListAdapter(requireContext(),arrayList)

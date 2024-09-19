@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <TextView
             android:id="@+id/experimentNumber"
             android:layout_width="wrap_content"
@@ -83,8 +82,8 @@
             app:layout_constraintTop_toBottomOf="@+id/generationNumber" />
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
             android:id="@+id/TextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -99,11 +98,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Binary"
-                android:visibility="gone"
-                android:textSize="16sp"
                 android:inputType="none"
-                />
+                android:text="Binary"
+                android:textSize="16sp"
+                android:visibility="gone" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
@@ -118,7 +116,7 @@
             app:layout_constraintTop_toBottomOf="@+id/TextInputLayout" />
 
         <com.github.chrisbanes.photoview.PhotoView
-            android:id="@+id/imageGenerate"
+            android:id="@+id/imageGenerateInitialState"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
@@ -126,16 +124,15 @@
             android:layout_marginEnd="10dp"
             android:adjustViewBounds="true"
             android:padding="5dp"
-            android:visibility="gone"
             android:scaleType="fitCenter"
             android:src="@drawable/new_logo2"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/generatebtn" />
 
-
         <com.github.chrisbanes.photoview.PhotoView
-            android:id="@+id/imageGenerate2"
+            android:id="@+id/imageGeneratePicture"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
@@ -143,13 +140,77 @@
             android:layout_marginEnd="10dp"
             android:adjustViewBounds="true"
             android:padding="5dp"
-            android:visibility="gone"
             android:scaleType="fitCenter"
             android:src="@drawable/new_logo2"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageGenerate" />
+            app:layout_constraintTop_toBottomOf="@+id/imageGenerateInitialState" />
 
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageGenerateMatrix"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/new_logo2"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageGeneratePicture" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageGenerateRuleVector"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/new_logo2"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageGenerateMatrix" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageConcentricCircle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/new_logo2"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageGenerateRuleVector" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageCylindricalDiagram"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/new_logo2"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageConcentricCircle" />
 
 
         <Button
@@ -160,12 +221,12 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="20dp"
-            android:visibility="gone"
             android:text="Download Picture"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageGenerate2" />
+            app:layout_constraintTop_toBottomOf="@+id/imageCylindricalDiagram" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

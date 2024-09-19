@@ -1,15 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="Fragments.ContributorFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/textDisplay"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Contribution.... will be added" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <!-- Contribution Title -->
+        <TextView
+            android:id="@+id/contribution_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="Contributions"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- How to Contribute -->
+        <TextView
+            android:id="@+id/how_to_contribute_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="How to Contribute"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/how_to_contribute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="You can contribute to the development of this app by reporting issues, suggesting new features, or submitting pull requests on our GitHub repository."
+            android:textSize="16sp" />
+
+        <!-- GitHub Link -->
+        <TextView
+            android:id="@+id/github_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="GitHub Repository"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/github_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:autoLink="web"
+            android:text="https://github.com/Sugamshaw"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="16sp" />
+
+        <!-- Acknowledgements -->
+        <TextView
+            android:id="@+id/acknowledgements_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Acknowledgements"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/acknowledgements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="We would like to thank all contributors who have helped improve this app. Special thanks to Sudhakar Sir and all our open-source community members."
+            android:textSize="16sp" />
+
+        <!-- Contact for Contributions -->
+        <TextView
+            android:id="@+id/contact_contributions_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Contact for Contributions"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/contact_contributions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="For any questions or suggestions related to contributions, please contact us at sugamshaw2002@gmail.com."
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

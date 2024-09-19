@@ -1,13 +1,97 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="Fragments.AboutAppFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hi about app section" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</FrameLayout>
+        <!-- App Name and Logo -->
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/new_logo2" />
+
+
+
+        <!-- Purpose and Features -->
+        <TextView
+            android:id="@+id/purpose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Explore and visualize various cellular automata patterns and rules."
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/features_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Features"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/features"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Simulate popular cellular automata rules\n- Customize generation and size\n- Save and load configurations\n- Analyze pattern evolution\n- Experiment with uniform and non-uniform cellular automata\n- Explore rules like Game of Life, Moore, and von Neumann"
+            android:textSize="16sp" />
+
+        <!-- Background and Story -->
+        <TextView
+            android:id="@+id/background_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Background"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Cellular Automata Explorer was created to help users visualize and understand the fascinating world of cellular automata, inspired by Conway's Game of Life and other rulesets."
+            android:textSize="16sp" />
+
+        <!-- Contact and Support -->
+        <TextView
+            android:id="@+id/contact_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="Contact and Support"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="For support, please contact us at\nEmail: sugamshaw2002@gmail.com.\nPh no: +91 6291800791"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

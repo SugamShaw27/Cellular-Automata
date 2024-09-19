@@ -1,13 +1,12 @@
 package com.example.cellularautomata.HomeFragments
 
-import adapter.GameoflifeAdapter
+import adapter.PlayGameAdapter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.cellularautomata.R
 import com.example.cellularautomata.databinding.FragmentPlayGamesBinding
 
 class PlayGamesFragment : Fragment() {
@@ -26,8 +25,11 @@ class PlayGamesFragment : Fragment() {
             "3. Majority rule xor moore_rule",
             "4. SumMod2 moore  rule",
             "5. SumMod2 vonneumann",
+            "6. Glider",
+            "7. Pulsar",
+            "8. Glider Game",
         )
-        val adapter = GameoflifeAdapter(requireContext(),array)
+        val adapter = PlayGameAdapter(requireContext(),array)
         binding.recylerView.layoutManager= StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
         binding.recylerView.adapter=adapter
 
